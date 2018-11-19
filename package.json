@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "WTFPL",
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "gm": "^1.23.1",
+    "husky": "^1.1.4",
+    "marked": "^0.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "node build.js && git add --all"
+    }
+  }
+}
