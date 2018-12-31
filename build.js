@@ -99,7 +99,7 @@ const convertImage = (imagePath, outputPath, maxWidth) => {
       ? parseInt(postDetails.minutes, 10)
       : Math.max(1, Math.round(postWords / 225));
 
-    const { title, timestamp, ...custom } = postDetails;
+    const { title, timestamp, minutes, ...custom } = postDetails;
 
     const postHtml = marked(file);
 
