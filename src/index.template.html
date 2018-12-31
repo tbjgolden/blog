@@ -477,7 +477,7 @@
       })(navigator.userAgent);
     </script>
     <div id="overlay"></div>
-    <div class="wrapper">
+    <div id="main" class="wrapper">
       <header id="header" class="header">
         <div class="header-inner">
           <h1 id="title">TOM.a.a.S.</h1>
@@ -508,6 +508,7 @@
       }
 
       var fromTop = 0;
+      var mainEl = document.getElementById('main');
       var postsContainer = document.getElementById('posts');
       var headerEl = document.getElementById('header');
       var browseEl = document.getElementById('browse');
@@ -640,6 +641,7 @@
 
         getAjax('posts/' + post.id + '.html', function (html) {
           body.innerHTML = html;
+          mainEl.scrollIntoView(true);
 
           var prettifyCodeInterval = setInterval(function () {
             if (window.PR) {
@@ -652,7 +654,6 @@
                   codeblock.setAttribute('class', (codeblock.getAttribute('class') || '') + ' prettyprint');
                 }
               }
-
               window.PR.prettyPrint();
             }
           }, 100);
