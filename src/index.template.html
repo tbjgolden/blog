@@ -673,7 +673,7 @@
         navButtonDate.textContent = new Date(post.timestamp).toLocaleString();
         var navButtonLength = document.createElement('SPAN');
         navButtonLength.setAttribute('style', 'display: inline-block');
-        navButtonLength.textContent = Math.max(1, Math.round(post.words / 225)) + ' min read';
+        navButtonLength.textContent = post.minutes + ' min read';
 
         navButtonSubtitle.appendChild(navButtonDate);
         navButtonSubtitle.appendChild(document.createTextNode(' · '));
