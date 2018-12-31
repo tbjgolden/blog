@@ -639,7 +639,7 @@
 
         var readingTime = document.createElement('SPAN');
         readingTime.setAttribute('class', 'post-reading-time');
-        readingTime.textContent = Math.max(1, Math.round(post.words / 225)) + ' min read';
+        readingTime.textContent = post.minutes + ' min read';
         article.appendChild(readingTime);
 
         var body = document.createElement('DIV');
